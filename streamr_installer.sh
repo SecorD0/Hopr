@@ -3,7 +3,7 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install wget git build-essential jq expect -y
 . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/docker_installer.sh)
-mkdir $HOME/.streamrDocker
+mkdir /root/.streamrDocker
 expect <<END
 	set timeout 300
 	spawn docker run -it -v $(cd ~/.streamrDocker; pwd):/root/.streamr streamr/broker-node:testnet bin/config-wizard
